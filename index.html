@@ -84,9 +84,10 @@
     max-width: 760px;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     gap: 4px;
     padding: 12px 20px 0 20px;
-    overflow-x: auto;
+    overflow-x: visible;
     scrollbar-width: none;
   }
   nav.tabs::-webkit-scrollbar { display: none; }
@@ -1195,7 +1196,7 @@
       </div>
       <div class="photo-caption" id="photoCaption">Honoring the roots that grew this whole crew 🌳</div>
 
-      <p class="desc" id="homeDesc">This is the hub for everything reunion-related — where we're gathering, what's happening, and a place to keep in touch, share photos and let everyone know if you're coming. Tap "Edit" to fill in the details.</p>
+      <p class="desc" id="homeDesc">This is the hub for everything reunion-related — where we're gathering, what's happening, and a place to keep in touch, share photos and let everyone know if you're coming.</p>
 
       <div class="fact-row">
         <div class="fact">
@@ -1213,6 +1214,14 @@
       <div style="margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;">
         <a class="primary-btn reg-btn" id="registerBtn" href="#" target="_blank" rel="noopener" style="display:none; text-decoration:none;">Click here to register</a>
         <button class="link-btn" data-goto="games">🎉 Play a game</button>
+      </div>
+
+      <div class="info-callout">
+        <h3>Start here</h3>
+        <p>1. Register using the registration form.</p>
+        <p>2. Pay the registration fee separately.</p>
+        <p>3. Order a shirt if you want one.</p>
+        <p>4. Check the Schedule.</p>
       </div>
 
       <div class="edit-panel" id="editPanel">
@@ -1252,6 +1261,14 @@
       <p>Send your registration fee via Zelle to <b>840-232-1595</b>. All registration fees are non-refundable. Family reunion T-shirts ($10 child / $15 adult) are purchased separately.</p>
       <p>Payment issues? Contact Brenda at <b>909-827-7615</b>.</p>
       <p>Questions for the committee? <a href="mailto:prattfamilyreunion27@gmail.com" style="color:var(--gold-dim); text-decoration:underline;">Contact the Family Reunion Committee</a></p>
+      <p>Corrections, edits, or removal requests? Email the Family Reunion Committee at <a href="mailto:prattfamilyreunion27@gmail.com" style="color:var(--gold-dim); text-decoration:underline;">prattfamilyreunion27@gmail.com</a>.</p>
+      <p class="muted-note">This site has no login, so anything posted here can be seen by anyone with the link. Please do not post sensitive private details.</p>
+    </div>
+
+    <div class="info-callout">
+      <h3>Lodging &amp; T-Shirts</h3>
+      <p>Lodging: details are coming — check back here for updates.</p>
+      <p>T-Shirts: order deadline to be determined. Shirts will be brought to the reunion and can be picked up at registration. For other arrangements, contact Brenda Prymus.</p>
     </div>
 
     <div id="homeOfflineNote"></div>
@@ -1260,10 +1277,10 @@
   <!-- SCHEDULE -->
   <section class="view" id="view-schedule">
     <div class="section-head"><h2>Weekend Schedule</h2></div>
-    <p class="muted-note">All times local. Everything below is set — check back here for any updates.</p>
+    <p class="muted-note">All times local. Check back here for any updates. The Saturday karaoke location is still to be announced.</p>
 
     <div class="day-block">
-      <h3>Saturday, July 24</h3>
+      <h3>Saturday, July 24, 2027</h3>
       <div class="event-row">
         <div class="event-time">12:00–4:30 PM</div>
         <div class="event-body">
@@ -1281,7 +1298,7 @@
     </div>
 
     <div class="day-block">
-      <h3>Sunday, July 25</h3>
+      <h3>Sunday, July 25, 2027</h3>
       <div class="event-row">
         <div class="event-time">10:40 AM</div>
         <div class="event-body">
@@ -1312,6 +1329,7 @@
       <div class="fee-row"><span>Adults</span><b>$15</b></div>
       <div class="fee-row"><span>Children</span><b>$10</b></div>
       <p>Order using the button below. Questions? Contact Brenda at <b>909-827-7615</b>.</p>
+      <p>T-Shirt order deadline to be determined. Shirts will be brought to the reunion and can be picked up at registration. For other arrangements, contact Brenda Prymus.</p>
     </div>
 
     <a class="primary-btn" href="https://form.jotform.com/262296506674062" target="_blank" rel="noopener" style="display:block; text-align:center; text-decoration:none; margin:16px 0;">Order your shirt</a>
@@ -1325,7 +1343,7 @@
       <h2>Photo Wall</h2>
       <button class="primary-btn" id="uploadBtn">Add photo</button>
     </div>
-    <p class="muted-note">Everyone in the family can drop in photos here — old and new.</p>
+    <p class="muted-note">Everyone in the family can drop in photos here — old and new. Tapping Add photo opens your phone's photo picker.</p>
     <input type="file" id="fileInput" accept="image/*">
     <div id="photoOfflineNote"></div>
     <div class="photo-grid" id="photoGrid"></div>
@@ -1340,7 +1358,7 @@
     <div class="msg-form" id="msgForm">
       <div class="field">
         <label for="msgName">Your name</label>
-        <input id="msgName" placeholder="Aunt Carol">
+        <input id="msgName" placeholder="Your name">
       </div>
       <div class="field">
         <label for="msgText">Message</label>
@@ -1461,7 +1479,7 @@
       <div class="field-row">
         <div class="field">
           <label for="tpBirthYear">Birth year</label>
-          <input id="tpBirthYear" type="number" placeholder="1958">
+          <input id="tpBirthYear" type="number" placeholder="Birth year">
         </div>
         <div class="field">
           <label for="tpDeathYear">Death year</label>
@@ -1522,11 +1540,11 @@
       <div class="field-row">
         <div class="field">
           <label for="mmBirthYear">Birth year</label>
-          <input id="mmBirthYear" type="number" placeholder="1945">
+          <input id="mmBirthYear" type="number" placeholder="Birth year">
         </div>
         <div class="field">
           <label for="mmDeathYear">Passed year</label>
-          <input id="mmDeathYear" type="number" placeholder="2020">
+          <input id="mmDeathYear" type="number" placeholder="Year passed">
         </div>
       </div>
       <div class="field">
@@ -1560,7 +1578,7 @@
         <button class="link-btn" id="videoUploadBtn" style="border:1px solid var(--gold); border-radius:999px; padding:9px 16px;">📁 Upload a video</button>
       </div>
     </div>
-    <p class="muted-note">Record a short "can't wait to see you" video (or any message for the family) and drop it here — no live call, no scheduling, watch anytime. Keep it under ~30 seconds if you can, so we don't run out of free storage.</p>
+    <p class="muted-note">Record a short "can't wait to see you" video (or any message for the family) and drop it here — no live call, no scheduling, watch anytime. Keep it under ~30 seconds if you can, so we don't run out of free storage. Tapping Record opens your phone's camera picker, or Upload lets you choose a video file.</p>
     <input type="file" id="videoRecordInput" accept="video/*" capture="user" style="display:none;">
     <input type="file" id="videoFileInput" accept="video/*" style="display:none;">
     <div id="videoOfflineNote"></div>
@@ -1572,11 +1590,12 @@
   <section class="view" id="view-prayer">
     <div class="section-head"><h2>Prayer Requests</h2></div>
     <p class="muted-note">Share what's on your heart, and tap 🙏 to let someone know you're praying for them.</p>
+    <p class="muted-note">This site has no login — prayer requests posted here can be seen by anyone with the link. Please do not share sensitive private details.</p>
     <div id="prayerOfflineNote"></div>
     <div class="msg-form" id="prayerForm">
       <div class="field">
         <label for="prayerName">Your name</label>
-        <input id="prayerName" placeholder="Aunt Carol">
+        <input id="prayerName" placeholder="Your name">
       </div>
       <div class="field">
         <label for="prayerText">Prayer request</label>
@@ -1703,7 +1722,7 @@ function makeAssets() {
   var DEFAULT_INFO = {
     familyName: 'Pratt & Nettles Family Reunion',
     date: '2027-07-24',
-    location: 'Fontana & Los Angeles, CA',
+    location: 'Fontana, Los Angeles & Ontario, CA',
     description: "Two days together: a family gathering at Oaks Park, worship service, and a Family Fun Night at Dave & Buster's. See the Schedule tab for full details, and check Registration & payment below to reserve your spot.",
     registerLink: 'https://form.jotform.com/262296161167056'
   };
@@ -1803,8 +1822,13 @@ function makeAssets() {
 
     if (currentInfo.date) {
       var d = new Date(currentInfo.date + 'T00:00:00');
+      var endD = new Date(d.getTime() + 86400000);
       var opts = { year: 'numeric', month: 'long', day: 'numeric' };
-      eyebrow.textContent = d.toLocaleDateString(undefined, opts);
+      if (endD.getFullYear() === d.getFullYear() && endD.getMonth() === d.getMonth()) {
+        eyebrow.textContent = d.toLocaleDateString(undefined, { month: 'long', day: 'numeric' }) + '\u2013' + endD.getDate() + ', ' + d.getFullYear();
+      } else {
+        eyebrow.textContent = d.toLocaleDateString(undefined, opts) + ' \u2013 ' + endD.toLocaleDateString(undefined, opts);
+      }
       countdownWrap.style.display = 'flex';
       function tick() {
         var diff = d.getTime() - Date.now();
@@ -3139,8 +3163,6 @@ function makeAssets() {
       '<div>Branch head: ' + (p.isBranchHead ? 'yes' : 'no') + '</div>' +
       '</details>';
     html += '<div style="display:flex; gap:10px;" class="pd-close">' +
-      '<button class="link-btn" id="pdEditBtn">Edit</button>' +
-      '<button class="link-btn" id="pdDeleteBtn" style="color:#a33;">Delete</button>' +
       '<button class="link-btn" id="pdCloseBtn">Close</button></div></div>';
     wrap.innerHTML = html;
 
@@ -3148,39 +3170,6 @@ function makeAssets() {
       a.addEventListener('click', function () { renderPersonDetail(a.dataset.gotoPerson); wrap.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
     });
     document.getElementById('pdCloseBtn').addEventListener('click', function () { renderPersonDetail(null); });
-    document.getElementById('pdDeleteBtn').addEventListener('click', async function () {
-      if (!dbNS) { showToast('Not connected — try again in a moment'); return; }
-      var msg = p.isBranchHead
-        ? p.name + ' is marked as a branch head — deleting them will dissolve their whole branch, and everyone in it will drop into "Everyone else" until reassigned to a different branch head. This cannot be undone. Remove anyway?'
-        : 'Remove ' + p.name + ' from the family tree? This cannot be undone.';
-      var ok = confirm(msg);
-      if (!ok) return;
-      try {
-        await dbNS.doc('familyTree/' + p.id).delete();
-        showToast('Removed from the tree');
-        treeSelectedId = null;
-        renderPersonDetail(null);
-      } catch (e) {
-        showToast('Could not remove — try again');
-      }
-    });
-    document.getElementById('pdEditBtn').addEventListener('click', function () {
-      treeEditingId = p.id;
-      document.getElementById('treeFormTitle').textContent = 'Edit ' + p.name;
-      document.getElementById('tpName').value = p.name || '';
-      document.getElementById('tpBranchHead').checked = !!p.isBranchHead;
-      document.getElementById('tpBirthYear').value = p.birthYear || '';
-      document.getElementById('tpDeathYear').value = p.deathYear || '';
-      document.getElementById('tpBio').value = p.bio || '';
-      document.getElementById('tpPhotoFile').value = '';
-      treePendingPhotoAsset = p.photoUrl || null;
-      populateParentSpouseSelects(p.id);
-      document.getElementById('tpParent1').value = p.parent1Id || '';
-      document.getElementById('tpParent2').value = p.parent2Id || '';
-      document.getElementById('tpSpouse').value = p.spouseId || '';
-      treeAddPanel.classList.add('open');
-      treeAddPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
   }
 
   document.getElementById('treeSearch').addEventListener('input', renderTree);
@@ -3301,22 +3290,10 @@ function makeAssets() {
         var lit = !!memoryLit[m.id];
         html += '<div class="mc-footer"><button class="candle-btn' + (lit ? ' lit' : '') + '" data-mid="' + m.id + '"' + (lit ? ' disabled' : '') + '>🕯️ ' + (lit ? 'Candle lit' : 'Light a candle') + '</button>' +
           '<span style="font-size:0.78rem; color:#9A937E;">' + (m.candles || 0) + ' lit</span>' +
-          '<button class="link-btn" data-medit="' + m.id + '" style="border-color:rgba(231,196,110,0.4); color:var(--gold);">Edit</button></div>';
+          '</div>';
         card.innerHTML = html;
         var candleBtn = card.querySelector('[data-mid]');
         candleBtn.addEventListener('click', function () { onLightCandle(m, candleBtn); });
-        card.querySelector('[data-medit]').addEventListener('click', function () {
-          memoryEditingId = m.id;
-          document.getElementById('memoryFormTitle').textContent = 'Edit tribute for ' + m.name;
-          document.getElementById('mmName').value = m.name || '';
-          document.getElementById('mmBirthYear').value = m.birthYear || '';
-          document.getElementById('mmDeathYear').value = m.deathYear || '';
-          document.getElementById('mmTribute').value = m.tribute || '';
-          document.getElementById('mmBy').value = m.submittedBy || '';
-          document.getElementById('mmPhotoFile').value = '';
-          memoryAddPanel.classList.add('open');
-          memoryAddPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
         grid.appendChild(card);
       });
   }
@@ -3337,7 +3314,7 @@ function makeAssets() {
     }
 
     if (dbNS) {
-      editBtn.style.display = 'inline-block';
+      // Public editing is hidden: the Edit button stays hidden. Contact the committee for corrections.
       setOfflineNote('homeOfflineNote', false);
       setOfflineNote('boardOfflineNote', false);
       setOfflineNote('gamesOfflineNote', false);
